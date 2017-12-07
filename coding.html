@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+
+<html>
+
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <title>OKCoder Coding Exercise</title>
+  </head>
+
+  <body>
+    <h1>OKCoder</h1>
+
+    <div id="container">
+    <div id="sidebar">
+      <h2>Tasks</h2>
+      <ul>
+	<a href="userpage.html"><li>User dashboard</li></a>
+        <a href="coding.html"><li>Programming tasks</li></a>
+        <a href="questions.html"><li>Personality questions</li></a>
+	<a href="eval.html"><li>Program submission</li></a>
+      </ul>
+
+      <h2>User Tools</h2>
+      <ul>
+        <li>Edit profile</li>
+        <li>Message users</li>
+        <li>Log out</li>
+      </ul>
+    </div><!-- sidebar -->
+
+    <div id="coding">
+      <p>In English, how would you tell someone to write a function that behaves like this?</p>
+      <p>Here are some sample inputs and outputs:</p>
+      <code>function(2) &rarr; 8</code><br>
+      <code>function(3) &rarr; 27</code><br>
+      <code>function(1) &rarr; 1</code>
+      <br>
+      <br>
+
+      <div id="generate_text">
+	<form>
+	  <textarea name="code" rows="3" cols="80">
+	  </textarea><br>
+	  <input type="submit" value="Submit">
+	</form>
+      </div><!-- end of generate text -->
+
+      <br>
+      <strong>OR</strong>
+      <br><br>
+
+      <div id="vote_text">
+	Which of these descriptions do you think is/are best? You may choose as many as you like, but pick at least one.<br><br>
+	<form>
+	  <input type="checkbox">Write a cubing function<br>
+	  <input type="checkbox">Function takes one argument and returns that number to the third power<br>
+	  <input type="checkbox">argument times three<br>
+	  <input type="submit" value="Submit">
+	</form>
+      </div><!-- end of vote text -->
+
+    </div><!-- coding -->
+    </div><!-- container -->
+  </body>
+
+</html>

@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+
+<html>
+
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <title>OKCoder Landing Page</title>
+  </head>
+
+  <body>
+
+    <h1>OKCoder</h1>
+
+    <div id="container">
+    <div id="sidebar">
+      <h2>Tasks</h2>
+      <ul>
+        <a href="userpage.html"><li>User dashboard</li></a>
+        <a href="coding.html"><li>Programming tasks</li></a>
+        <a href="questions.html"><li>Personality questions</li></a>
+        <a href="eval.html"><li>Program submission</li></a>
+      </ul>
+
+      <h2>User Tools</h2>
+      <ul>
+        <li>Edit profile</li>
+        <li>Message users</li>
+        <li>Log out</li>
+      </ul>
+    </div><!-- sidebar -->
+
+    <div id="coding">
+      <h2>Program Submission Report</h2>
+      <form action="userpage.html" method="post" id="eval">
+	<table border="0">
+	  <tr>	
+	    <td style="text-align:right; padding-right:10px;">
+	      Which assignment is this submission for? <span style="color:#f00">*</span>
+	    </td>
+	    <td>
+	      <!-- populate this list with assignments this user has not yet filled out an evaluation for -->
+	    <select name="program">
+	      <option value="1">Program 1: Hello World</option>
+	      <option value="2">Program 2: Math</option>
+	      <option value="3">Program 3: Basic Functions</option>
+	    </select>
+	    </td>
+	  </tr>
+	  <tr>
+	    <td style="text-align:right; padding-right:10px;">
+	      Who was your partner? <span style="color:#f00">*</span>
+	    </td>
+	    <td>
+	      <!-- populate this list with all classmates that are not this person -->
+	      <input list="partner" name="partner">
+	      <datalist id="partner">
+		<option value="No Partner">
+		<option value="username_1">
+		<option value="username_2">
+		<option value="username_3">
+	      </datalist>
+	    </td>
+	  </tr>
+
+	  <div id="partner">
+	  <tr><!-- horizontal line -->
+	    <td colspan="2">
+	      <hr>
+	    </td>
+	  </tr>
+
+	  <tr>
+	    <td style="text-align:right; padding-right:10px;">
+	      Why did you choose to work with this partner?
+	    </td>
+	    <td>
+	      <input type="radio">We've worked together before<br>
+	      <input type="radio">We haven't worked together before, but we're friends outside of class<br>
+	      <input type="radio">We haven't worked together before, but we sit next to each other in lecture<br>
+	      <input type="radio">We haven't worked together before, but we sit next to each other in lab<br>
+	      <input type="radio">We haven't worked together before, but they live near me<br>
+	    </td>
+	  </tr>
+	  <tr>
+	    <td style="text-align:right; padding-right:10px; padding-top:10px;">
+	      Rate your experience working with your partner:
+	    </td>
+	    <td style="padding-top:10px;">
+	      <span class="minlabel">awful</span>
+	      <input type="range" name="overall" min="1" max="5">
+	      <span class="maxlabel">fantastic</span>
+	    </td>
+	  </tr>
+
+	  <tr>
+	    <td style="text-align:right; padding-right:10px; padding-top:10px;">
+	      How skilled did you feel, compared to your partner?
+	    </td>
+	    <td style="padding-top:10px;">
+	      <span class="minlabel">less skilled</span>
+	      <input type="range" name="learned" min="1" max="5">
+	      <span class="maxlabel">more skilled</span>
+	    </td>
+	  </tr>
+
+	  <tr>
+	    <td style="text-align:right; padding-right:10px; padding-top:5px;">
+	      Do you want to work with this partner again?
+	    </td>
+	    <td style="padding-top:10px;">
+	      <input type="radio">Yes<br>
+	      <input type="radio">No<br>
+	      <input type="radio">Maybe<br>
+	    </td>
+	  </tr>
+
+	  <tr>
+	    <td style="text-align:right; padding-right:10px; padding-top:5px;">
+	      How did you complete the majority<br/>of this assignment?
+	    </td>
+	    <td style="padding-top:10px;">
+	      <input type="radio">Pair programming: two people, one computer<br>
+	      <input type="radio">Partner programming: two people, two computers, same room<br>
+	      <input type="radio">Divide-and-conquer: two people, two computers, different locations<br>
+	    </td>
+	  </tr>
+
+	  <tr>
+	    <td style="text-align:right; padding-right:10px; padding-top:10px;">
+	      About how much of the work<br>would you say you did?
+	    </td>
+	    <td style="padding-top:10px;">
+	      <span class="minlabel">very little</span>
+	      <input type="range" name="workload" min="1" max="5">
+	      <span class="maxlabel">all of it</span>
+	    </td>
+	  </tr>
+
+	  <tr>
+	    <td colspan="2" style="padding-top:10px;">
+	      What would you change about your partner to make them really perfect?<br>
+	      <textarea name="partner_change" form="eval" rows="3" cols="80" placeholder="Don't worry, we won't tell them."></textarea>
+	    </td>
+	  </tr>
+	  </div><!-- end of partner questions -->
+	  
+	  <div id="solo">
+	  <tr><!-- horizontal line -->
+	    <td colspan="2">
+	      <hr>
+	    </td>
+	  </tr>
+
+	  <tr>
+	    <td style="text-align:right; padding-right:10px; padding-top:5px;">
+	      Why did you choose to work alone?<br>Choose all that apply.
+	    </td>
+	    <td style="padding-top:5px;">
+	      <input type="checkbox">I prefer working alone<br>
+	      <input type="checkbox">I learn better when I have to do the whole project myself<br>
+	      <input type="checkbox">I wanted a partner but couldn't find one<br>
+	      <input type="checkbox">I wanted a partner but finding one is too much additional work<br>
+	    </td>
+	  </tr>
+
+	  <tr>
+	    <td style="text-align:right; padding-right:10px; padding-top:5px;">
+	      Are you interested in a partner for future projects?
+	    </td>
+	    <td style="padding-top:10px;">
+	      <input type="radio">Yes<br>
+	      <input type="radio">No<br>
+	      <input type="radio">Maybe<br>
+	    </td>
+	  </tr>
+	  </div><!-- end of solo questions -->
+
+	  <tr><!-- horizontal line -->
+	    <td colspan="2">
+	      <hr>
+	    </td>
+	  </tr>
+	  
+	  <tr>
+	    <td style="text-align:right; padding-right:10px; padding-top:5px;">
+	      How long did the assignment take to complete?
+	    </td>
+	    <td style="padding-top:5px;">
+	      <input type="radio">Less than an hour<br>
+	      <input type="radio">1-2 hours<br>
+	      <input type="radio">2-3 hours<br>
+	      <input type="radio">3-4 hours<br>
+	      <input type="radio">4-5 hours<br>
+	      <input type="radio">5 hours or more<br>
+	    </td>
+	  </tr>
+
+	  <tr>
+	    <td style="text-align:right; padding-right:10px; padding-top:5px;">
+	      What kinds of work did you do on this assignment?
+	    </td>
+	    <td style="padding-top:10px;">
+	      <input type="checkbox">Debugged code<br>
+	      <input type="checkbox">Figured out design/logic<br>
+	      <input type="checkbox">Wrote code<br>
+	      <input type="checkbox">Wrote comments<br>
+	    </td>
+	  </tr>
+
+	  <tr>
+	    <td style="text-align:right; padding-right:10px; padding-top:5px;">
+	      Which of these resources did you use on this assignment?
+	    </td>
+	    <td style="padding-top:10px;">
+	      <input type="checkbox">Textbook<br>
+	      <input type="checkbox">Class notes<br>
+	      <input type="checkbox">TA/Instructor office hours<br>
+	      <input type="checkbox">Tutoring lab<br>
+	      <input type="checkbox">Google<br>
+	    </td>
+	  </tr>
+
+	  <tr>
+	    <td style="text-align:right; padding-right:10px; padding-top:10px;">
+	      How difficult did you find this assignment?
+	    </td>
+	    <td style="padding-top:10px;">
+	      <span class="minlabel">super easy</span>
+	      <input type="range" name="again" min="1" max="5">
+	      <span class="maxlabel">impossible</span>
+	    </td>
+	  </tr>
+	</table>
+	<br>
+	Was there anything in particular you thought was too easy/hard about this assignment?<br>
+	<textarea name="difficult_comm" form="eval" rows="3" cols="80" placeholder="Your answer"></textarea>
+	<br><br>
+	Did you learn anything from doing this assignment? If so, what?<br>
+	<textarea name="learned_comm" form="eval" rows="3" cols="80" placeholder="Your answer"></textarea>
+	<br><br>
+	Additional comments?<br>
+	<textarea name="comments" form="eval" rows="3" cols="80" placeholder="Let us know how it went!"></textarea>
+	<br><br>
+
+	<strong>IMPORTANT:</strong> Don't forget to upload your code!<br>
+	<input type="file" accept=".py">
+	<br><br>
+	<input type="submit" value="Submit">
+      </form>
+    </div><!-- coding -->
+    </div><!-- container -->
+
+  </body>
+</html>
